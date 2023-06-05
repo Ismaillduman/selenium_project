@@ -32,8 +32,9 @@ public class BasicNavigations {
         Thread.sleep(1000);
         driver.navigate().to("https://www.google.com");
         Thread.sleep(2000);
-
         driver.close();
+
+
 
     }
 }
