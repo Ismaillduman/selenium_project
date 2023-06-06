@@ -16,6 +16,7 @@ public class TC_3 {
         driver.get("https://google.com");
         Thread.sleep(1000);
         driver.findElement(By.xpath("//*[@id=\"W0wltc\"]/div")).click();
+        //driver.findElement(By.cssSelector("[id='L2AGLb']")).click();
         WebElement searchBox = driver.findElement(By.name("q"));
         searchBox.sendKeys("Apple");
         searchBox.sendKeys(Keys.ENTER);
