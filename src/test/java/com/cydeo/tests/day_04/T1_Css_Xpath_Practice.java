@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class Task1_Css_Xpath_Practice {
+public class T1_Css_Xpath_Practice {
 /*XPATH and CSS Selector PRACTICES
 
 DO NOT USE ANY DEVELOPER TOOLS TO GET ANY LOCATORS.
