@@ -14,6 +14,7 @@ public class WebDriverFactory {
 
             driver.get(url);
             driver.manage().window().maximize();
+
             return driver;
         } else if (browser.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
