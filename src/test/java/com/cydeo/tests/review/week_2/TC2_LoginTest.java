@@ -29,11 +29,12 @@ public class TC2_LoginTest {
         login_button.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement flash_text=driver.findElement(By.id("flash"));
+        WebElement flash_text2=driver.findElement(By.xpath("//div[normalize-space(text())='You logged into a secure area!']"));
         String expected_flash_text= "You logged into a secure area!";
-        String actual_flash_text=flash_text.getText();
+        String actual_flash_text=flash_text2.getText();
         Assert.assertEquals(expected_flash_text,actual_flash_text,"Expected Text not equal with the actual Text");
 
-
+        driver.close();
 
 
 //driver.close(); close only current tab

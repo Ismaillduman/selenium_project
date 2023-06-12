@@ -5,7 +5,11 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
+import java.time.Duration;
 import java.util.List;
 
 
@@ -28,8 +32,16 @@ public class TC_4_registration_form_fill {
     // 14. Click to "Sign up" button
     // 15. Verify text displayed on page
     //     Expected: "Well done!"*/
-    public static void main(String[] args) {
-        WebDriver driver = WebDriverFactory.getDriver("chrome", "https://practice.cydeo.com/registration_form");
+    WebDriver driver;
+    @BeforeMethod
+    public void setUp(){
+        driver = WebDriverFactory.getDriver("chrome", "https://practice.cydeo.com/registration_form");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    }
+
+    @Test
+    public void registration_form_page() {
+
 
         WebElement first_name = driver.findElement(By.name("firstname"));
         first_name.sendKeys("John");
@@ -88,8 +100,12 @@ public class TC_4_registration_form_fill {
         WebElement done_text = driver.findElement(By.cssSelector("[class='alert-heading']"));
         String actual_text = done_text.getText();
         String expected_text = "Well done!";
-        Assert.assertEquals(actual_text, expected_text);
+        Assert.assertEquals("not equal content",expected_text,actual_text);
 
+
+    }
+    @AfterMethod
+    public void tearDown(){
         driver.quit();
     }
 }
