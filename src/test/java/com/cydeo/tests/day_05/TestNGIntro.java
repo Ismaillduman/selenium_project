@@ -1,5 +1,6 @@
 package com.cydeo.tests.day_05;
 
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class TestNGIntro {
@@ -20,11 +21,11 @@ public class TestNGIntro {
     public void tearDownClass(){
         System.out.println("after class");
     }
-    @Test
+    @Test (priority = 1)
     public void test1(){
-        System.out.println("test1");
+        Assert.assertEquals("apple","apple");
     }
-    @Test
+    @Test(priority = 2)
     public void test2(){
         System.out.println("test2");
     }
