@@ -1,81 +1,35 @@
-XPATH PRACTICES
+TC #1: Information alert practice
+1. Open browser
+2. Go to website: http://practice.cydeo.com/javascript_alerts
+3. Click to “Click for JS Alert” button
+4. Click to OK button from the alert
+5. Verify “You successfully clicked an alert” text is displayed.
+TC #2: Confirmation alert practice
+1. Open browser
+2. Go to website: http://practice.cydeo.com/javascript_alerts
+3. Click to “Click for JS Confirm” button
+4. Click to OK button from the alert
+5. Verify “You clicked: Ok” text is displayed.
+TC #3: Information alert practice
+1. Open browser
+2. Go to website: http://practice.cydeo.com/javascript_alerts
+3. Click to “Click for JS Prompt” button
+4. Send “hello” text to alert
+5. Click to OK button from the alert
+6. Verify “You entered: hello” text is displayed.
 
-DO NOT USE ANY DEVELOPER TOOLS TO GET ANY LOCATORS.
-TC #1: StaleElementReferenceException handling
-1. Open Chrome browser
-2. Go to https://practice.cydeo.com/add_remove_elements/
-3. Click to “Add Element” button
-4. Verify “Delete” button is displayed after clicking.
-5. Click to “Delete” button.
-6. Verify “Delete” button is NOT displayed after clicking.
-USE XPATH LOCATOR FOR ALL WEBELEMENT LOCATORS
+TC #4: Iframe practice
+1. Create a new class called: T4_Iframes
+2. Create new test and make set ups
+3. Go to: https://practice.cydeo.com/iframe
+4. Assert: “Your content goes here.” Text is displayed.
+5. Assert: “An iFrame containing the TinyMCE WYSIWYG Editor”
 
-XPATH PRACTICES
-
-DO NOT USE ANY DEVELOPER TOOLS TO GET ANY LOCATORS.
-TC #2: Radiobutton handling
-1. Open Chrome browser
-2. Go to https://practice.cydeo.com/radio_buttons
-3. Click to “Hockey” radio button
-4. Verify “Hockey” radio button is selected after clicking.
-USE XPATH LOCATOR FOR ALL WEBELEMENT LOCATORS
-
-XPATH PRACTICES
-
-DO NOT USE ANY DEVELOPER TOOLS TO GET ANY LOCATORS.
-TC #3: Utility method task for (continuation of Task2)
-1. Open Chrome browser
-2. Go to https://practice.cydeo.com/radio_buttons
-3. Click to “Hockey” radio button
-4. Verify “Hockey” radio button is selected after clicking.
-
-USE XPATH LOCATOR FOR ALL WEBELEMENT LOCATORS
-Create a utility method to handle above logic.
-Method name: clickAndVerifyRadioButton
-Return type: void or boolean
-Method args:
-1. WebDriver
-2. Name attribute as String (for providing which group of radio buttons)
-3. Id attribute as String (for providing which radio button to be clicked)
-Method should loop through the given group of radio buttons. When it finds the
-matching option, it should click and verify option is Selected.
-Print out verification: true
-
-TC #4: Cydeo Title Verification
-1.Open Chrome browser
-2.Go to https://www.cydeo.com
-3.Verify title:
-Expected: Cydeo
-
-TC#5: Verifying “Simple dropdown” and “State selection” dropdown
-default values
-1. Open Chrome browser
-2. Go to https://practice.cydeo.com/dropdown
-3. Verify “Simple dropdown” default selected value is correct
-Expected: “Please select an option”
-4. Verify “State selection” default selected value is correct
-Expected: “Select a State”
-
-TC #6: Selecting date on dropdown and verifying
-1. Open Chrome browser
-2. Go to https://practice.cydeo.com/dropdown
-3. Select “December 1st, 1933” and verify it is selected.
-Select year using : visible text
-Select month using : value attribute
-Select day using : index number
-
-TC #7: Selecting state from State dropdown and verifying result
-1. Open Chrome browser
-2. Go to http://practice.cybertekschool.com/dropdown
-3. Select Illinois
-4. Select Virginia
-5. Select California
-6. Verify final selected option is California.
-Use all Select options. (visible text, value, index)
-
-TC #8: Selecting value from non-select dropdown
-1. Open Chrome browser
-2. Go to https://practice.cydeo.com/dropdown
-3. Click to non-select dropdown
-4. Select Facebook from dropdown
-5. Verify title is “Facebook - Log In or Sign Up”
+TC #5: Window Handle practice
+1. Create a new class called: T5_WindowsPractice
+2. Create new test and make set ups
+3. Go to : https://practice.cydeo.com/windows
+4. Assert: Title is “Windows”
+5. Click to: “Click Here” link
+6. Switch to new Window.
+7. Assert: Title is “New Window”
