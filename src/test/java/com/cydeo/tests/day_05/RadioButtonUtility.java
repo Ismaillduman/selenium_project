@@ -23,9 +23,7 @@ public class RadioButtonUtility {
                 Assert.assertTrue(eachElement.isSelected());
             }
         }
-
-
-    }
+   }
 
 }
 
