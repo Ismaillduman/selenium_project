@@ -1,6 +1,6 @@
 package com.cydeo.tests.day_07_WebTables;
 
-import com.cydeo.utilities.BrowserUtils;
+import com.cydeo.utilities.CRM_Utilities;
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
@@ -29,8 +29,8 @@ helpdesk2@cydeo.com UserUser*/
     }
     @Test
     public void login(){
-       // BrowserUtils.login_crm(driver);
-        BrowserUtils.login_crm(driver,"hr1@cybertekschool.com","UserUser");
+       // CRM_Utilities.login_crm(driver);
+        CRM_Utilities.login_crm(driver,"hr1@cybertekschool.com","UserUser");
 
 //        WebElement user_login=driver.findElement(By.name("USER_LOGIN"));
 //        WebElement user_password=driver.findElement(By.name("USER_PASSWORD"));
