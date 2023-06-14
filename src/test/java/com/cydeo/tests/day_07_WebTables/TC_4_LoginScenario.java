@@ -2,9 +2,7 @@ package com.cydeo.tests.day_07_WebTables;
 
 import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.WebDriverFactory;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -31,14 +29,16 @@ helpdesk2@cydeo.com UserUser*/
     }
     @Test
     public void login(){
+       // BrowserUtils.login_crm(driver);
+        BrowserUtils.login_crm(driver,"hr1@cybertekschool.com","UserUser");
 
-        WebElement user_login=driver.findElement(By.name("USER_LOGIN"));
-        WebElement user_password=driver.findElement(By.name("USER_PASSWORD"));
-        WebElement login_button=driver.findElement(By.xpath("//input[@type='submit']"));
-        user_login.sendKeys("hr1@cybertekschool.com");
-        user_password.sendKeys("UserUser");
-        login_button.click();
-        BrowserUtils.verifyTitleContains("Portal",driver);
+//        WebElement user_login=driver.findElement(By.name("USER_LOGIN"));
+//        WebElement user_password=driver.findElement(By.name("USER_PASSWORD"));
+//        WebElement login_button=driver.findElement(By.xpath("//input[@type='submit']"));
+//        user_login.sendKeys("hr1@cybertekschool.com");
+//        user_password.sendKeys("UserUser");
+//        login_button.click();
+//        BrowserUtils.verifyTitleContains("Portal",driver);
 
 
     }
