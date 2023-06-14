@@ -49,8 +49,8 @@ and get those pages. We will learn JavascriptExecutor later as well.*/
 //        String expectedTitleContains = "Etsy";
 //        Assert.assertTrue(actualTitle.contains(expectedTitleContains));
 
-        BrowserUtils browserUtils= new BrowserUtils();
-        browserUtils.switchWindowAndVerify(driver,"etsy","etsy");
+
+        BrowserUtils.switchWindowAndVerify(driver,"etsy","etsy");
     }
 
     @AfterMethod
