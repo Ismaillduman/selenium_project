@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 
 public class WebTable {
+
     /*TC #1: Web table practice
 1. Go to: https://practice.cydeo.com/web-tables
 2. Verify Bob’s name is listed as expected.
@@ -39,7 +40,7 @@ Expected: 12/31/2021*/
     @Test
     public  void orderDate(){
 
-        System.out.println(WebTableUtils.returnOrderDate("Alexandra Gray", driver));
+        System.out.println("Alexandra Gray--> "+WebTableUtils.returnOrderDate("Alexandra Gray", driver));
 
         WebTableUtils.orderVerify("Stewart Dawidson","03/29/2021",driver);
 

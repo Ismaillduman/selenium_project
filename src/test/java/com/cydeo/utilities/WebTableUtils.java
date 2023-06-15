@@ -28,22 +28,23 @@ expectedOrderDate matching actualOrderDate.*/
     public static String returnOrderDate (String costumerName, WebDriver driver){
 
 
-        String dueDate="(//*[@class='SampleTable']//tbody//td[2])[.='%s']/following-sibling::td[3]";
+//        String dueDate="(//*[@class='SampleTable']//tbody//td[2])[.='%s']/following-sibling::td[3]";
+//
+//        String formattedXPath=String.format(dueDate,costumerName);
+        WebElement dueDates = driver.findElement(By.xpath("(//*[@class='SampleTable']//tbody//td[2])[.='"+costumerName+"']/following-sibling::td[3]"));
 
-        String formattedXPath=String.format(dueDate,costumerName);
-        WebElement dueDates = driver.findElement(By.xpath(formattedXPath));
-        String actualDueDate= dueDates.getText();
-
-        return actualDueDate;
+        return dueDates.getText();
     }
 
     public static void orderVerify (String costumerName,String expectedOrderDate, WebDriver driver){
 
 
-        String dueDate="(//*[@class='SampleTable']//tbody//td[2])[.='%s']/following-sibling::td[3]";
+        //String dueDate="(//*[@class='SampleTable']//tbody//td[2])[.='%s']/following-sibling::td[3]";
+        //String formattedXPath=String.format(dueDate,costumerName);
+        //WebElement dueDates = driver.findElement(By.xpath(formattedXPath));
+        WebElement dueDates=driver.findElement(By.xpath("(//*[@class='SampleTable']//tbody//td[2])[.='"+costumerName+"']/following-sibling::td[3]"));
 
-        String formattedXPath=String.format(dueDate,costumerName);
-        WebElement dueDates = driver.findElement(By.xpath(formattedXPath));
+
         String actualOrderDate= dueDates.getText();
 
 
