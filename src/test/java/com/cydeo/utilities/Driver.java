@@ -17,7 +17,7 @@ public class Driver {
    public static WebDriver getDriver(){
 
         String browserType= ConfigurationReader.getProperty("browser");
-        String url=ConfigurationReader.getProperty("env3");
+        String url=ConfigurationReader.getProperty("env");
         if(driver==null){
 
             switch(browserType){
