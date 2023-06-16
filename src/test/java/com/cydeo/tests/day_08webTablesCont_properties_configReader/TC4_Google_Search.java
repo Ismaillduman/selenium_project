@@ -36,13 +36,14 @@ assertion should not fail.*/
     }
 
     @Test
-    public void test1() {
+    public void test1() throws InterruptedException {
 
 
         WebElement rejection = driver.findElement(By.xpath("(//div[@class='QS5gu sy4vM'])[1]"));
         rejection.click();
         WebElement searchBox = driver.findElement(By.cssSelector("#APjFqb"));
         searchBox.sendKeys(ConfigurationReader.getProperty("search.keyword"));
+        Thread.sleep(2000);
         searchBox.sendKeys(Keys.ENTER);
         BrowserUtils.sleep(2);
         String expectedTitle=ConfigurationReader.getProperty("search.keyword")+" - Google Suche";
