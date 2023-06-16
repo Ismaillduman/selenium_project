@@ -21,6 +21,7 @@ public class FakerPractice {
     public void test(){
         Faker faker= new Faker();
         Driver.getDriver();
+        Driver.getDriver().get("https://practice.cydeo.com/login");
 
         WebElement username= Driver.getDriver().findElement(By.name("username"));
         username.sendKeys(faker.name().username());
@@ -35,5 +36,8 @@ public class FakerPractice {
 
         Assert.assertEquals(actual_text,expected_text);
 
+        Driver.closeDriver();
+
     }
+
 }

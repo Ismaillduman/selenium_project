@@ -34,7 +34,7 @@ assertion should not fail.*/
     @Test
     public void test1(){
 
-
+        Driver.getDriver().get("https://bing.com");
         WebElement rejection= Driver.getDriver().findElement(By.cssSelector("[class='bnp_btn_reject']"));
         WebElement search_box= Driver.getDriver().findElement(By.cssSelector("#sb_form_q"));
         rejection.click();
@@ -45,7 +45,7 @@ assertion should not fail.*/
     @Test
     public void test2(){
 
-
+        Driver.getDriver().get("https://bing.com");
         WebElement rejection= Driver.getDriver().findElement(By.cssSelector("[class='bnp_btn_reject']"));
         WebElement search_box= Driver.getDriver().findElement(By.cssSelector("#sb_form_q"));
         rejection.click();
