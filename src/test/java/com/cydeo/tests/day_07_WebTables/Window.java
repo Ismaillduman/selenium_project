@@ -27,7 +27,8 @@ and get those pages. We will learn JavascriptExecutor later as well.*/
 
     @BeforeMethod
     public void setUp() {
-        driver = WebDriverFactory.getDriver("chrome", "https://www.amazon.com");
+        driver = WebDriverFactory.getDriver("chrome");
+        driver.get("https://www.amazon.com");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
     }

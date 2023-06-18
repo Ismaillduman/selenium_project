@@ -10,6 +10,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 public class BingSearch {
+
     /*TC #1: Bing search
 1- Open a chrome browser
 2- Go to: https://bing.com
@@ -31,8 +32,10 @@ assertion should not fail.*/
 //        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //
 //    }
+
     @Test
     public void test1(){
+
 
         Driver.getDriver().get("https://bing.com");
         WebElement rejection= Driver.getDriver().findElement(By.cssSelector("[class='bnp_btn_reject']"));
@@ -40,6 +43,7 @@ assertion should not fail.*/
         rejection.click();
         search_box.sendKeys(ConfigurationReader.getProperty("search.keyword"),Keys.ENTER);
         BrowserUtils.verifyTitle(ConfigurationReader.getProperty("search.keyword")+" - Suchen",Driver.getDriver());
+
     }
 
     @Test
@@ -51,6 +55,7 @@ assertion should not fail.*/
         rejection.click();
         search_box.sendKeys(ConfigurationReader.getProperty("search.keyword"),Keys.ENTER);
         BrowserUtils.verifyTitle(ConfigurationReader.getProperty("search.keyword")+" - Suchen",Driver.getDriver());
+
     }
     @AfterMethod
     public void tearDown(){

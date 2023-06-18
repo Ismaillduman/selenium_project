@@ -24,7 +24,8 @@ helpdesk2@cydeo.com UserUser*/
     WebDriver driver;
     @BeforeMethod
     public void setUp(){
-        driver= WebDriverFactory.getDriver("chrome","http://login1.nextbasecrm.com/");
+        driver= WebDriverFactory.getDriver("chrome");
+        driver.get("http://login1.nextbasecrm.com/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
     @Test

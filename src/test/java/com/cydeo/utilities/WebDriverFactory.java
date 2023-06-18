@@ -6,13 +6,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class WebDriverFactory {
-    public static WebDriver getDriver(String browser, String url) {
+    public static WebDriver getDriver(String browser) {
 
         if (browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
             WebDriver driver = new ChromeDriver();
 
-            driver.get(url);
+
             driver.manage().window().maximize();
 
             return driver;
@@ -20,7 +20,7 @@ public class WebDriverFactory {
             WebDriverManager.firefoxdriver().setup();
             WebDriver driver = new FirefoxDriver();
 
-            driver.get(url);
+
             driver.manage().window().maximize();
             return driver;
         } else {

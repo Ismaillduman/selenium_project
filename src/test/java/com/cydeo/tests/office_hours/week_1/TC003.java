@@ -25,7 +25,8 @@ public class TC003 {
     @BeforeMethod
     public void setUp() {
 
-        driver = WebDriverFactory.getDriver("chrome", "https://vytrack.com/");
+        driver = WebDriverFactory.getDriver("chrome");
+        driver.get("https://vytrack.com/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 

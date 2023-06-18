@@ -12,19 +12,21 @@ import java.util.List;
 public class WebTable {
     @Test
     public void test() {
+
+
         /*/ TC : Web table practice
     // 1. Open Chrome browser
     // 2. Go to https://practice.cydeo.com/tables
-    // 3. Print table data as a single String, not so common, but useful sometimes
-    // 4. verify tconway@eartconhlink.net is anywhere in the table
-    // 5. print all column names in single line
-    // 6. print each column name in separate lines using a loop and findElements method
+
 */
+
+        // 3. Print table data as a single String, not so common, but useful sometimes
         String data = "";
         Driver.getDriver().get("https://practice.cydeo.com/tables");
         List<List<WebElement>> elements = Collections.singletonList(Driver.getDriver().findElements(By.xpath("//tbody//tr")));
         for (List<WebElement> eachElement : elements) {
             for (WebElement eachWebElement : eachElement) {
+                // 4. verify tconway@eartconhlink.net is anywhere in the table
                 if (eachWebElement == Driver.getDriver().findElement(By.xpath("(//*[@id='table1']//tr//td)[.='Conway']/following-sibling::td[4]"))) {
                     Assert.assertTrue(eachElement.contains(Driver.getDriver().findElement(By.xpath("(//*[@id='table1']//tr//td)[.='Conway']/following-sibling::td[4]"))));
                 }
@@ -34,19 +36,26 @@ public class WebTable {
         }
         System.out.println(data);
 
+        // 4. verify tconway@eartconhlink.net is anywhere in the table
+
         WebElement conway_link = Driver.getDriver().findElement(By.xpath("(//*[@id='table1']//tr//td)[.='Conway']/following-sibling::td[4]"));
 
         Assert.assertTrue(conway_link.isDisplayed());
+
+        // 5. print all column names in single line
         String columnNames = "";
         List<WebElement> headers = Driver.getDriver().findElements(By.xpath("(//*[@id='table1']//tr)[1]"));
         for (WebElement eachHeader : headers) {
 
-            columnNames+=eachHeader.getText();
+            columnNames += eachHeader.getText();
             System.out.println("columnNames = " + columnNames);
         }
+
+        // 6. print each column name in separate lines using a loop and findElements method
         List<WebElement> header = Driver.getDriver().findElements(By.xpath("//*[@id='table1']//tr/th"));
         for (WebElement eachHeader : header) {
             System.out.println("Each column Name--> " + eachHeader.getText());
         }
+        Driver.closeDriver();
     }
 }

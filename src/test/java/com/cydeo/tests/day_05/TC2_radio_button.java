@@ -19,7 +19,8 @@ public class TC2_radio_button {
     WebDriver driver;
 @BeforeMethod
     public void setUp(){
-    driver = WebDriverFactory.getDriver("chrome","https://practice.cydeo.com/radio_buttons");
+    driver = WebDriverFactory.getDriver("chrome");
+    driver.get("https://practice.cydeo.com/radio_buttons");
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 }
 @Test

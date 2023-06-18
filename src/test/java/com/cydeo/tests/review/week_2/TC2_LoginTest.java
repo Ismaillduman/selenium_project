@@ -20,7 +20,8 @@ public class TC2_LoginTest {
     //    Expected: "You logged into a secure area!"
 */
     public static void main(String[] args) {
-        WebDriver driver= WebDriverFactory.getDriver("chrome","https://practice.cydeo.com/login");
+        WebDriver driver= WebDriverFactory.getDriver("chrome");
+        driver.get("https://practice.cydeo.com/login");
         WebElement username=driver.findElement(By.cssSelector("[name='username']"));
         WebElement password=driver.findElement(By.cssSelector("[name='password']"));
         WebElement login_button=driver.findElement(By.id("wooden_spoon"));

@@ -19,7 +19,8 @@ PS: Inspect and decide which locator you should be using to locate web
 elements.*/
     public static void main(String[] args) {
 
-        WebDriver driver = WebDriverFactory.getDriver("firefox", "https://login1.nextbasecrm.com/");
+        WebDriver driver = WebDriverFactory.getDriver("firefox");
+        driver.get("https://login1.nextbasecrm.com/");
         WebElement user_name = driver.findElement(By.className("login-inp"));
         user_name.sendKeys("incorrect_password");
         WebElement password = driver.findElement(By.name("USER_PASSWORD"));

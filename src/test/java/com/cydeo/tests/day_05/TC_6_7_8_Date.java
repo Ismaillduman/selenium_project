@@ -41,7 +41,8 @@ TC #8: Selecting value from non-select dropdown
 
     @BeforeMethod
     public void setUp() {
-        driver = WebDriverFactory.getDriver("chrome", "https://practice.cydeo.com/dropdown");
+        driver = WebDriverFactory.getDriver("chrome");
+        driver.get( "https://practice.cydeo.com/dropdown");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 

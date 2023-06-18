@@ -25,7 +25,8 @@ public class TC1 {
 
     @BeforeMethod
     public void setup() {
-        driver = WebDriverFactory.getDriver("chrome", "https://practice.cydeo.com/add_remove_elements/");
+        driver = WebDriverFactory.getDriver("chrome");
+        driver.get( "https://practice.cydeo.com/add_remove_elements/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
     }

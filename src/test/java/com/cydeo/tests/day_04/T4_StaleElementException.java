@@ -18,7 +18,8 @@ public class T4_StaleElementException {
 5- Verify it is displayed, again.
 */
     public static void main(String[] args) {
-        WebDriver driver = WebDriverFactory.getDriver("chrome", "https://practice.cydeo.com/abtest");
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
+        driver.get( "https://practice.cydeo.com/abtest");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         WebElement cydeo = driver.findElement(By.xpath("//div//a"));

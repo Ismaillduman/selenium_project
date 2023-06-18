@@ -31,7 +31,8 @@ assertion should not fail.*/
     @BeforeMethod
     public void setUp() {
 
-        driver = WebDriverFactory.getDriver(ConfigurationReader.getProperty("browser"), ConfigurationReader.getProperty("env2"));
+        driver = WebDriverFactory.getDriver(ConfigurationReader.getProperty("browser"));
+        driver.get( ConfigurationReader.getProperty("env2"));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 

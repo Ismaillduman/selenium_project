@@ -23,7 +23,8 @@ public class TC_5_window_handel {
 7. Assert: Title is “New Window”*/
     @BeforeMethod
     public void setUp(){
-        driver=WebDriverFactory.getDriver("chrome","https://practice.cydeo.com/windows");
+        driver=WebDriverFactory.getDriver("chrome");
+        driver.get("https://practice.cydeo.com/windows");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
     }

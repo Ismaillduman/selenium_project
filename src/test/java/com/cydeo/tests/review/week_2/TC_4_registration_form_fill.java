@@ -35,7 +35,8 @@ public class TC_4_registration_form_fill {
     WebDriver driver;
     @BeforeMethod
     public void setUp(){
-        driver = WebDriverFactory.getDriver("chrome", "https://practice.cydeo.com/registration_form");
+        driver = WebDriverFactory.getDriver("chrome");
+        driver.get( "https://practice.cydeo.com/registration_form");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 

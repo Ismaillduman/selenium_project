@@ -22,7 +22,8 @@ public class TC_4_iframe {
 
     @BeforeMethod
     public void setUp() {
-        driver = WebDriverFactory.getDriver("chrome", "https://practice.cydeo.com/iframe");
+        driver = WebDriverFactory.getDriver("chrome");
+        driver.get("https://practice.cydeo.com/iframe");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
     }

@@ -15,7 +15,8 @@ public class Cydeo {
 4- Verify title is as expected:
 Expected: Practice
 PS: Locate “Home” link using “xpath” locator*/
-        WebDriver driver= WebDriverFactory.getDriver("chrome","https://practice.cydeo.com/inputs");
+        WebDriver driver= WebDriverFactory.getDriver("chrome");
+        driver.get("https://practice.cydeo.com/inputs");
         WebElement home= driver.findElement(By.xpath("//a[@class='nav-link']"));
         home.click();
         String actual=driver.getTitle();
