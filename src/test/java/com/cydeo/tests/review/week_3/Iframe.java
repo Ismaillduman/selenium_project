@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Iframe {
+public class Iframe  {
     /*// TC : Iframe practice
     // 1. Users are already login and on the homepage of CRM app
     // 2. Users click the MESSAGE tab
@@ -20,7 +20,7 @@ public class Iframe {
     @Test
     public void test(){
         Faker faker= new Faker();
-        Driver.getDriver().get("http://login1.nextbasecrm.com/");
+       Driver.getDriver().get("http://login1.nextbasecrm.com/");
         CRM_Utilities.login_crm(Driver.getDriver(), ConfigurationReader.getProperty("username"),ConfigurationReader.getProperty("password"));
 
         WebElement messageTab=Driver.getDriver().findElement(By.id("feed-add-post-form-tab-message"));
