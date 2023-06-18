@@ -20,7 +20,8 @@ public class TC1_navigations_and_getMethods {
       // 8. Verify url contains "selenium"*/
     public static void main(String[] args) {
 
-        WebDriver driver= WebDriverFactory.getDriver("chrome","https://www.etsy.com");
+        WebDriver driver= WebDriverFactory.getDriver("chrome");
+        driver.get("https://www.etsy.com");
         driver.navigate().to("https://www.amazon.com/");
         driver.navigate().back();
         driver.navigate().forward();

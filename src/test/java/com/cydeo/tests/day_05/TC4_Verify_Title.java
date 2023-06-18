@@ -18,7 +18,8 @@ Expected: Cydeo*/
 
     @BeforeMethod
     public void setUp() {
-        driver = WebDriverFactory.getDriver("chrome", "https://www.cydeo.com");
+        driver = WebDriverFactory.getDriver("chrome");
+        driver.get("https://www.cydeo.com");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 

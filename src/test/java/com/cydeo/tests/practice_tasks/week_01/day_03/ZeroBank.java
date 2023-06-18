@@ -13,7 +13,8 @@ public class ZeroBank {
 2. Go to http://zero.webappsecurity.com/login.html
 3. Verify header text
 Expected: “Log in to ZeroBank”*/
-        WebDriver driver= WebDriverFactory.getDriver("chrome","http://zero.webappsecurity.com/login.html");
+        WebDriver driver= WebDriverFactory.getDriver("chrome");
+        driver.get("http://zero.webappsecurity.com/login.html");
 
        // WebElement header= driver.findElement(By.cssSelector("div[class='page-header']"));
         WebElement header= driver.findElement(By.xpath("//div[@class='page-header']"));

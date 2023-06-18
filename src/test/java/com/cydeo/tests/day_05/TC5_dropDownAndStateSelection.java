@@ -25,7 +25,8 @@ Expected: “Select a State”*/
 
     @BeforeMethod
     public void setUp() {
-        driver = WebDriverFactory.getDriver("chrome", "https://practice.cydeo.com/dropdown");
+        driver = WebDriverFactory.getDriver("chrome");
+        driver.get("https://practice.cydeo.com/dropdown");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 

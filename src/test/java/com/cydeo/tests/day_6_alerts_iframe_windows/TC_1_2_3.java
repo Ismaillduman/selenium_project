@@ -35,7 +35,8 @@ TC #3: Information alert practice
 
     @BeforeMethod
     public void setUp() {
-        driver = WebDriverFactory.getDriver("chrome", "http://practice.cydeo.com/javascript_alerts");
+        driver = WebDriverFactory.getDriver("chrome");
+        driver.get( "http://practice.cydeo.com/javascript_alerts");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 

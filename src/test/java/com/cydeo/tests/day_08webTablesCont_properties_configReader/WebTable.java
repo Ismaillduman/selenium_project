@@ -21,7 +21,8 @@ Expected: 12/31/2021*/
 
     @BeforeMethod
     public void setup() {
-        driver = WebDriverFactory.getDriver("chrome", "https://practice.cydeo.com/web-tables");
+        driver = WebDriverFactory.getDriver("chrome");
+        driver.get( "https://practice.cydeo.com/web-tables");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 

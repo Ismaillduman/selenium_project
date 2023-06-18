@@ -17,7 +17,8 @@ public class T2_FindElements {
 5- Print out the texts of the links.
 6- Print out the HREF attribute values of the links*/
     public static void main(String[] args) {
-        WebDriver driver= WebDriverFactory.getDriver("chrome","https://practice.cydeo.com/abtest");
+        WebDriver driver= WebDriverFactory.getDriver("chrome");
+        driver.get("https://practice.cydeo.com/abtest");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         List<WebElement> listOfLinks= driver.findElements(By.tagName("a"));
         System.out.println(listOfLinks.size());

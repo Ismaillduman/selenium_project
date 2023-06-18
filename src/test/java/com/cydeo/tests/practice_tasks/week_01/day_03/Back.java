@@ -17,7 +17,8 @@ Expected: Gmail
 5- Go back to Google by using the .back();
 6- Verify title equals:
 Expected: Google*/
-        WebDriver driver = WebDriverFactory.getDriver("chrome", "https://google.com");
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
+        driver.get("https://google.com");
         driver.findElement(By.xpath("//button[@id='W0wltc']")).click();
         WebElement gmail = driver.findElement(By.xpath("//*[@aria-label='Gmail (Öffnet einen neuen Tab.)']"));
         gmail.click();

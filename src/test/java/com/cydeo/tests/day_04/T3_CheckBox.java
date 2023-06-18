@@ -17,7 +17,8 @@ public class T3_CheckBox {
 7. Confirm checkbox #2 is NOT selected.
 */
     public static void main(String[] args) {
-        WebDriver driver = WebDriverFactory.getDriver("chrome", "https://practice.cydeo.com/checkboxes");
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
+        driver.get( "https://practice.cydeo.com/checkboxes");
 
         WebElement checkBox = driver.findElement(By.cssSelector("#box1"));
 

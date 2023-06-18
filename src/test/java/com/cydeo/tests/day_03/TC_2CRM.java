@@ -20,7 +20,8 @@ PS: Inspect and decide which locator you should be using to locate web
 elements.*/
     public static void main(String[] args) {
 
-        WebDriver driver = WebDriverFactory.getDriver("chrome", "https://login1.nextbasecrm.com/");
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
+        driver.get( "https://login1.nextbasecrm.com/");
         WebElement remember_text = driver.findElement(By.className("login-item-checkbox-label"));
         String actual_remember_text = remember_text.getText();
         String expected_remember_text = "Remember me on this computer";

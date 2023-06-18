@@ -17,7 +17,7 @@ public class Driver {
    public static WebDriver getDriver(){
 
         String browserType= ConfigurationReader.getProperty("browser");
-        String url=ConfigurationReader.getProperty("env3");
+        //String url=ConfigurationReader.getProperty("env");
         if(driver==null){
 
             switch(browserType){
@@ -25,14 +25,14 @@ public class Driver {
 
                     WebDriverManager.chromedriver().setup();
                     driver= new ChromeDriver();
-                    driver.get(url);
+                   // driver.get(url);
                     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     break;
 
                 case "firefox":
                     WebDriverManager.chromedriver().setup();
                     driver= new FirefoxDriver();
-                    driver.get(url);
+                    //driver.get(url);
                     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     break;
 

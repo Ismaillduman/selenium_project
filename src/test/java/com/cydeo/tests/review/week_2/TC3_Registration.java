@@ -18,7 +18,8 @@ public class TC3_Registration {
     WebDriver driver;
     @BeforeMethod
     public void beforeMethod(){
-        driver= WebDriverFactory.getDriver("chrome","https://practice.cydeo.com/registration_form");
+        driver= WebDriverFactory.getDriver("chrome");
+        driver.get("https://practice.cydeo.com/registration_form");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
     @Test

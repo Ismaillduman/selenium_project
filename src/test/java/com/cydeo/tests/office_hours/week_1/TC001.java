@@ -21,7 +21,8 @@ public class TC001 {
     WebDriver driver;
     @BeforeMethod
     public void setUp(){
-        driver= WebDriverFactory.getDriver("chrome","https://vytrack.com/");
+        driver= WebDriverFactory.getDriver("chrome");
+        driver.get("https://vytrack.com/");
         BrowserUtils.sleep(3);
     }
     @Test

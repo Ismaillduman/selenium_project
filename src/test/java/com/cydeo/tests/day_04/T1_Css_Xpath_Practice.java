@@ -27,7 +27,8 @@ Then solve the task using XPATH only. Try to create 2 different
 XPATH locator if possible*/
 
     public static void main(String[] args) {
-        WebDriver driver = WebDriverFactory.getDriver("chrome", "https://practice.cydeo.com/forgot_password");
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
+        driver.get("https://practice.cydeo.com/forgot_password");
         WebElement homeLink = driver.findElement(By.cssSelector("a[class='nav-link']"));
         WebElement homeLink2 = driver.findElement(By.cssSelector("a[href='/']"));
         WebElement homeLink3 = driver.findElement(By.cssSelector("a.nav-link"));

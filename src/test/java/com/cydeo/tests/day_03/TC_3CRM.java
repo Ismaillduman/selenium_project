@@ -16,7 +16,8 @@ PS: Inspect and decide which locator you should be using to locate web
 elements.
 PS2: Pay attention to where to get the text of this button from*/
     public static void main(String[] args) {
-        WebDriver driver= WebDriverFactory.getDriver("chrome","https://login1.nextbasecrm.com/");
+        WebDriver driver= WebDriverFactory.getDriver("chrome");
+        driver.get("https://login1.nextbasecrm.com/");
         WebElement login_text= driver.findElement(By.cssSelector("input[value='Log In']"));
         String expected="Log In";
         String actual=login_text.getAttribute("value");
