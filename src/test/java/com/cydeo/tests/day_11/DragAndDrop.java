@@ -21,27 +21,27 @@ TC3 #: Drag and drop into the big circle
 2. Drag and drop the small circle to bigger circle.
 3. Assert:
 -Text in big circle changed to: “You did great!”*/
-//    @Test
-//    public void test(){
-//        Driver.getDriver().get("https://practice.cydeo.com/drag_and_drop_circles");
-//        WebElement smallCircle= Driver.getDriver().findElement(By.id("draggable"));
-//        WebElement bigCircle= Driver.getDriver().findElement(By.xpath("//*[@id='droptarget']"));
-//
-//        String actualBigCircleText=bigCircle.getText();
-//        String expectedBigCircleText="Drag the small circle here.";
-//
-//        Assert.assertEquals(actualBigCircleText,expectedBigCircleText);
-//
-//        Actions actions= new Actions(Driver.getDriver());
-//
-//       actions.dragAndDrop(smallCircle,bigCircle).build().perform();
-//        //actions.clickAndHold(smallCircle).moveToElement(bigCircle).perform();
-//        String expectedBigCircleTextAfterDrop="You did great!";
-//        BrowserUtils.sleep(2);
-//       String actualBigCircleTextAfterDrop=bigCircle.getText();
-//        Assert.assertEquals(actualBigCircleTextAfterDrop,expectedBigCircleTextAfterDrop);
-//
-//    }
+    @Test
+    public void test(){
+        Driver.getDriver().get("https://practice.cydeo.com/drag_and_drop_circles");
+        WebElement smallCircle= Driver.getDriver().findElement(By.id("draggable"));
+        WebElement bigCircle= Driver.getDriver().findElement(By.xpath("//*[@id='droptarget']"));
+
+        String actualBigCircleText=bigCircle.getText();
+        String expectedBigCircleText="Drag the small circle here.";
+
+        Assert.assertEquals(actualBigCircleText,expectedBigCircleText);
+
+        Actions actions= new Actions(Driver.getDriver());
+
+       actions.dragAndDrop(smallCircle,bigCircle).build().perform();
+        //actions.clickAndHold(smallCircle).moveToElement(bigCircle).perform();
+        String expectedBigCircleTextAfterDrop="You did great!";
+        BrowserUtils.sleep(2);
+       String actualBigCircleTextAfterDrop=bigCircle.getText();
+        Assert.assertEquals(actualBigCircleTextAfterDrop,expectedBigCircleTextAfterDrop);
+
+    }
     @AfterMethod
     public void tearDown(){
         BrowserUtils.sleep(2);
