@@ -6,6 +6,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
@@ -20,6 +21,12 @@ public class ExplicitWait {
 a. Checkbox is not displayed
 b. “It’s gone!” message is displayed.
 NOTE: FOLLOW POM*/
+    DynamicControlsPage controlsPage;
+    @BeforeMethod
+    public void setUp(){
+        Driver.getDriver().get("https://practice.cydeo.com/dynamic_controls");
+        controlsPage =new DynamicControlsPage();
+    }
     @Test
 
     public void explicit_wait_test(){
@@ -37,7 +44,11 @@ NOTE: FOLLOW POM*/
 
         Assert.assertEquals(controlsPage.itsGoneMessageText.getText(),"It's gone!");
 
-        Driver.closeDriver();
+        //Driver.closeDriver();
+    }
+    @Test
+    public void enable_button_test(){
+
     }
 
 }
