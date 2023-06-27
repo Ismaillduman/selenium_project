@@ -1,8 +1,13 @@
 package com.cydeo.utilities;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.time.Duration;
 import java.util.Set;
 
 public class BrowserUtils {
@@ -54,6 +59,24 @@ Method info:
     public static void verifyTitle(String expectedTitle,WebDriver driver){
         String currentTitle= driver.getTitle();
         Assert.assertEquals(currentTitle,expectedTitle);
+    }
+
+    public static void waitForInvisibilityOf(WebElement target){
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+
+        wait.until(ExpectedConditions.invisibilityOf(target));
+    }
+
+    public static void waitForTitleContains(String title){
+        WebDriverWait wait= new WebDriverWait(Driver.getDriver(),Duration.ofSeconds(10));
+
+        wait.until(ExpectedConditions.titleContains(title));
+    }
+
+    public static void scrollDown(int pixels){
+        JavascriptExecutor js= (JavascriptExecutor) Driver.getDriver();
+
+        js.executeScript("window.scrollBy(0,"+ pixels +")");
     }
 
 }

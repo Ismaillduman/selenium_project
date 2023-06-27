@@ -7,11 +7,12 @@ import org.openqa.selenium.support.PageFactory;
 
 public class DynamicControlsPage {
     public DynamicControlsPage() {
-        PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(), this);
     }
+
     @FindBy(xpath = "//*[.='Remove']")
     public WebElement removeButton;
-    @FindBy(id="message")
+    @FindBy(id = "message")
     public WebElement itsGoneMessageText;
 
     @FindBy(id = "checkbox")
@@ -19,4 +20,12 @@ public class DynamicControlsPage {
     @FindBy(id = "loading")
     public WebElement loading;
 
+    @FindBy(css = "[onclick='swapInput()']")
+    public WebElement enableButton;
+
+    @FindBy(css = "[id='message']")
+    public WebElement enableMessage;
+
+    @FindBy(xpath = "//input[@type='text']")
+    public WebElement inputBox;
 }
